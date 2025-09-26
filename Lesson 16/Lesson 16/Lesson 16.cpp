@@ -1,0 +1,116 @@
+﻿#include <iostream>
+#include <string>
+#include <Windows.h>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+    //int year;
+    //cout << "Введіть рік: ";
+    //cin >> year;
+
+    //int days;
+
+    //if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
+    //    days = 366;
+    //}
+    //else {
+    //    days = 365;
+    //}
+
+    //cout << "У " << year << " році " << days << " днів." << endl;
+
+
+
+
+    //char background, text;
+
+    //cout << "Виберіть колір фону (0-F): ";
+    //cin >> background;
+
+    //cout << "Виберіть колір тексту (0-F): ";
+    //cin >> text;
+
+    //string command = "color ";
+    //command += background;
+    //command += text;
+
+    //system(command.c_str());
+
+    //cout << "Колір змінено!" << endl;
+
+
+
+
+
+    //int width, height;
+    //char symbol;
+    //char color;
+
+    //cout << "Введіть ширину прямокутника: ";
+    //cin >> width;
+
+    //cout << "Введіть висоту прямокутника: ";
+    //cin >> height;
+
+    //cout << "Введіть символ для малювання: ";
+    //cin >> symbol;
+
+    //cout << "Введіть колір тексту (0-F): ";
+    //cin >> color;
+
+    //string command = "color 0";
+    //command += color;
+    //system(command.c_str());
+
+    //cout << endl;
+
+    //for (int i = 0; i < height; i++) {
+    //    for (int j = 0; j < width; j++) {
+    //        if (i == 0 || i == height - 1 || j == 0 || j == width - 1) {
+    //            cout << symbol;
+    //        }
+    //        else {
+    //            cout << " ";
+    //        }
+    //    }
+    //    cout << endl;
+    //}
+
+
+
+
+
+
+    int n;
+    cout << "Введіть розмір масиву: ";
+    cin >> n;
+
+    int arr[100]; // масив фіксованого розміру (макс. 100 елементів)
+
+    cout << "Введіть " << n << " елементів масиву:" << endl;
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    int minVal = arr[0];
+    int maxVal = arr[0];
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < minVal) minVal = arr[i];
+        if (arr[i] > maxVal) maxVal = arr[i];
+    }
+
+    cout << "Мінімальний елемент: " << minVal << endl;
+    cout << "Максимальний елемент: " << maxVal << endl;
+
+
+
+
+    return 0;
+}
